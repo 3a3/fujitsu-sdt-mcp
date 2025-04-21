@@ -1,0 +1,19 @@
+{
+  "name": "fujitsu-sdt-mcp",
+  "displayName": "Fujitsu Social Digital Twin",
+  "description": "MCP server for accessing Fujitsu's Social Digital Twin and Digital Rehearsal API",
+  "version": "0.1.1",
+  "repository": "https://github.com/3a3/fujitsu-sdt-mcp",
+  "command": "uvx",
+  "args": ["fujitsu-sdt-mcp"],
+  "env": {
+    "FUJITSU_API_BASE_URL": "https://apigateway.research.global.fujitsu.com/sdtp",
+    "FUJITSU_API_KEY": ""
+  },
+  "author": {
+    "name": "GUO Zhaogong",
+    "url": "https://github.com/3a3"
+  },
+  "categories": ["transportation", "simulation", "urban planning"],
+  "keywords": ["fujitsu", "digital twin", "transportation", "simulation", "MCP"]
+}

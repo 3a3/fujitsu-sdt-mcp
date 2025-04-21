@@ -1,0 +1,62 @@
+[project]
+name = "fujitsu-sdt-mcp"
+version = "0.1.1"
+description = "MCP Server for Fujitsu Social Digital Twin and Digital Rehearsal API"
+readme = "README.md"
+requires-python = ">=3.13"
+license = {text = "MIT"}
+authors = [
+    {name = "GUO Zhaogong", email = "guo.zhaogong@gmail.com"},
+]
+
+dependencies = [
+    "mcp>=1.6.0",
+    "httpx>=0.28.1",
+    "fastapi>=0.115.12",
+    "uvicorn>=0.34.1",
+    "python-dotenv>=1.1.0",
+    "typing-extensions>=4.13.2",
+    "pytz>=2025.2",
+    "rich>=14.0.0",
+    "anyio>=4.9.0",
+    "orjson>=3.10.16",
+    "idna>=3.10",
+    "certifi>=2025.1.31",
+]
+
+[project.scripts]
+fujitsu-sdt-mcp = "fujitsu_sdt_mcp.server:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.5",
+    "pytest-asyncio>=0.26.0",
+    "black>=25.1.0",
+    "isort>=6.0.1",
+    "mypy>=1.15.0",
+    "ruff>=0.11.5",
+]
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 120
+target-version = ["py313"]
+
+[tool.isort]
+profile = "black"
+line_length = 120
+
+[tool.mypy]
+python_version = "3.13"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+
+[tool.ruff]
+line-length = 120
+target-version = "py313"
+select = ["E", "F", "B", "I"]
