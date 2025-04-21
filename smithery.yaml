@@ -1,0 +1,24 @@
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+
+startCommand:
+  type: stdio
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required:
+      - fujitsuApiKey
+    properties:
+      fujitsuApiBaseUrl:
+        type: string
+        default: https://apigateway.research.global.fujitsu.com/sdtp
+        description: Base URL for Fujitsu API
+      fujitsuApiKey:
+        type: string
+        description: API key for Fujitsu API
+  commandFunction:
+    # A JS function that produces the CLI command based on the given config to start the MCP on stdio.
+    |-
+    (config) => ({command: 'python', args: ['-m', 'fujitsu_sdt_mcp.server'], env: {FUJITSU_API_BASE_URL: config.fujitsuApiBaseUrl, FUJITSU_API_KEY: config.fujitsuApiKey}})
+  exampleConfig:
+    fujitsuApiBaseUrl: https://apigateway.research.global.fujitsu.com/sdtp
+    fujitsuApiKey: YOUR_API_KEY_HERE
