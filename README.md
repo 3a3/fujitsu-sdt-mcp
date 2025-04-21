@@ -2,6 +2,10 @@
 
 This project integrates [Fujitsu's Social Digital Twin and Digital Rehearsal API](https://portal.research.global.fujitsu.com/converging-technology/) with the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/), allowing Large Language Models (LLMs) to access Fujitsu's Digital Rehearsal API through natural language.
 
+<a href="https://glama.ai/mcp/servers/@3a3/fujitsu-sdt-mcp">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@3a3/fujitsu-sdt-mcp/badge" alt="Fujitsu Social Digital Twin Server MCP server" />
+</a>
+
 ## Overview
 
 Fujitsu's Social Digital Twin recreates not only the state of people and objects in the digital space based on real-world data, but also entire economic and social activities. Its core function, "Digital Rehearsal," enables users to simulate human and social behavior in a digital space before implementing measures in the real world, allowing for advance verification of their effects and impacts.
