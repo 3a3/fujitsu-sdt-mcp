@@ -1,5 +1,7 @@
 # Fujitsu Social Digital Twin MCP Server
 
+[![smithery badge](https://smithery.ai/badge/@3a3/fujitsu-sdt-mcp)](https://smithery.ai/server/@3a3/fujitsu-sdt-mcp)
+
 This project integrates [Fujitsu's Social Digital Twin and Digital Rehearsal API](https://portal.research.global.fujitsu.com/converging-technology/) with the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/), allowing Large Language Models (LLMs) to access Fujitsu's Digital Rehearsal API through natural language.
 
 <a href="https://glama.ai/mcp/servers/@3a3/fujitsu-sdt-mcp">
@@ -29,6 +31,14 @@ This project uses MCP to bridge the gap between LLMs and the Digital Rehearsal A
 - MCP-compatible LLM client (e.g., Claude Desktop)
 
 ## Installation
+
+### Installing via Smithery
+
+To install Fujitsu Social Digital Twin Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@3a3/fujitsu-sdt-mcp):
+
+```bash
+npx -y @smithery/cli install @3a3/fujitsu-sdt-mcp --client claude
+```
 
 ### 1. Clone the Repository
 
