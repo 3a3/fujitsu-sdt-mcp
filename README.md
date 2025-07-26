@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/3a3-fujitsu-sdt-mcp-badge.png)](https://mseep.ai/app/3a3-fujitsu-sdt-mcp)
+
 # Fujitsu Social Digital Twin MCP Server
 
 [![smithery badge](https://smithery.ai/badge/@3a3/fujitsu-sdt-mcp)](https://smithery.ai/server/@3a3/fujitsu-sdt-mcp)
