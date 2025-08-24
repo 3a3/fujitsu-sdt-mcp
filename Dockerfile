@@ -16,8 +16,17 @@ COPY src ./src
 # Install dependencies
 RUN pip install --no-cache-dir .
 
+# Create non-root user and switch
+RUN groupadd -g 10001 app \
+    && useradd -r -u 10001 -g app -m -d /home/app app \
+    && chown -R app:app /app
+
 # Set environment variables
-ENV PYTHONUNBUFFERED=1
+ENV PYTHONUNBUFFERED=1 \
+    HOME=/home/app
+
+# Run as non-root user
+USER app
 
 # Default command to run MCP server
 CMD ["python", "-m", "fujitsu_sdt_mcp.server"]
